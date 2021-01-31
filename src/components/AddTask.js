@@ -101,7 +101,7 @@ export const AddTask = ({
                                     role="button"
                                 >
                                     X
-                </span>
+                                </span>
                             </div>
                         </>
                     )}
@@ -134,7 +134,7 @@ export const AddTask = ({
                         }
                     >
                         Add Task
-          </button>
+                    </button>
                     {!showQuickAddTask && (
                         <span
                             className="add-task__cancel"

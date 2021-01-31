@@ -31,6 +31,9 @@ export const IndividualProject = ({ project }) => {
                 onKeyDown={(e) => {
                     if (e.key === 'Enter') setShowConfirm(!showConfirm);
                 }}
+                tabIndex={0}
+                role="button"
+                aria-label="Confirm deletion of project"
             >
                 <FaTrashAlt />
                 {showConfirm && (
@@ -48,6 +51,9 @@ export const IndividualProject = ({ project }) => {
                                 onKeyDown={(e) => {
                                     if (e.key === 'Enter') setShowConfirm(!showConfirm);
                                 }}
+                                tabIndex={0}
+                                role="button"
+                                aria-label="Cancel adding project, do not delete"
                             >
                                 Cancel
                             </span>
