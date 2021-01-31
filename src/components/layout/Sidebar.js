@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaChevronDown, FaInbox, FaRegCalendarAlt, FaRegCalendar } from 'react-icons/fa'
+import { FaChevronDown, FaInbox, FaRegCalendarAlt, FaRegCalendar } from 'react-icons/fa';
 
 export const Sidebar = () => {
     return (
@@ -43,7 +43,7 @@ export const Sidebar = () => {
             <ul className="sidebar__projects">
                 Projects    
             </ul>
-            
+
             Project component
         </div>
     );
