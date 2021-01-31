@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto:400,700,900");
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700,900');
 
 // General Settings
 html {
@@ -16,7 +16,7 @@ body {
   margin: 0;
   padding: 0;
   line-height: 1;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   color: #202020;
   background-color: #fafafa;
   font-smooth: always;
@@ -158,7 +158,7 @@ header {
   top: 0;
   width: 100%;
 
-  @include mq("900px") {
+  @include mq('900px') {
     padding: 0 10px;
   }
 
@@ -259,7 +259,7 @@ header {
   border-right: $generic-border;
   background-color: #fafafa;
 
-  @include mq("900px") {
+  @include mq('900px') {
     display: none;
   }
 
@@ -334,7 +334,7 @@ header {
   }
 
   &__project {
-    @include va("left");
+    @include va('left');
   }
 
   &__dot {
@@ -425,11 +425,16 @@ header {
   &__inner {
     @include box-overlay();
     z-index: 99;
-    width: 200px;
+    width: 220px !important;
     padding: 10px;
     top: 10px;
     right: 0;
     background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 
     p {
       margin-top: 5px;
@@ -440,12 +445,13 @@ header {
     }
 
     button {
-      @include btn("50px");
+      @include btn('50px');
     }
-    span {
-      @include cancel();
-      font-weight: normal;
-    }
+  }
+  &__cancel {
+    @include btn('50px');
+    background-color: #666666 !important;
+    font-weight: normal;
   }
 }
 
@@ -475,7 +481,7 @@ header {
   padding-top: 80px;
   padding-bottom: 84px;
 
-  @include mq("900px") {
+  @include mq('900px') {
     margin-left: 0;
     width: auto;
   }
@@ -546,7 +552,7 @@ header {
     height: calc(100vh);
 
     .add-task__main {
-      @include mq("900px") {
+      @include mq('900px') {
         width: 90%;
       }
 
@@ -615,7 +621,7 @@ header {
   }
 
   &__submit {
-    @include btn("90px");
+    @include btn('90px');
   }
 }
 
@@ -679,7 +685,7 @@ header {
   @include box-overlay();
   background-color: white;
 
-  @include mq("900px") {
+  @include mq('900px') {
     width: 200px;
     right: 0;
   }
@@ -717,7 +723,7 @@ header {
   }
 
   &__submit {
-    @include btn("100px");
+    @include btn('100px');
   }
 
   &__cancel {

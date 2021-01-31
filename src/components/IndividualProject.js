@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { FaTrashAlt } from 'react-icons/fa';
+import PropTypes from 'prop-types';
 import { useProjectsValue, useSelectedProjectValue } from '../context';
 import { firebase } from '../firebase';
 
@@ -46,7 +47,8 @@ export const IndividualProject = ({ project }) => {
                             >
                                 Delete
                             </button>
-                            <span
+                            <button
+                                className="project-delete-modal__cancel"
                                 onClick={() => setShowConfirm(!showConfirm)}
                                 onKeyDown={(e) => {
                                     if (e.key === 'Enter') setShowConfirm(!showConfirm);
@@ -56,11 +58,15 @@ export const IndividualProject = ({ project }) => {
                                 aria-label="Cancel adding project, do not delete"
                             >
                                 Cancel
-                            </span>
+                            </button>
                         </div>
                     </div>
                 )}
             </span>
         </>
     );
+};
+
+IndividualProject.propTypes = {
+    project: PropTypes.object.isRequired,
 };
